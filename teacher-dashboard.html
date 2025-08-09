@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard">
+    <header class="dashboard-header">
+        <h1>Teacher Dashboard</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <div class="dashboard-content">
+        <!-- Manage Available Slots Section -->
+        <section class="section">
+            <h2>Manage Available Slots</h2>
+            <form id="add-slot-form" onsubmit="event.preventDefault(); addSlot();">
+                <div class="form-group">
+                    <label for="slot-datetime">Add New Slot:</label>
+                    <input type="datetime-local" id="slot-datetime" required>
+                    <button type="submit" class="btn-primary">Add Slot</button>
+                </div>
+            </form>
+            <div id="slot-list">
+                <!-- Available slots will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Appointment Requests Section -->
+        <section class="section">
+            <h2>Appointment Requests</h2>
+            <div id="appointment-requests">
+                <!-- Pending requests will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Teacher Schedule Section -->
+        <section class="section">
+            <h2>My Schedule</h2>
+            <div id="teacher-schedule">
+                <!-- Approved appointments will be displayed here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
