@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard">
+    <header class="dashboard-header">
+        <h1>Student Dashboard</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <div class="dashboard-content">
+        <!-- Search and Book Section -->
+        <section class="section">
+            <h2>Find Teachers</h2>
+            <input type="text" id="search-teacher" class="search-box" placeholder="Search teachers by name or subject...">
+            <div id="teacher-list">
+                <!-- Teachers will be displayed here -->
+            </div>
+        </section>
+
+        <!-- My Appointments Section -->
+        <section class="section">
+            <h2>My Appointments</h2>
+            <div id="student-appointments">
+                <!-- Student appointments will be displayed here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
