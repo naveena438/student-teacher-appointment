@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Teacher Booking System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student-Teacher Booking System</h1>
+            <nav>
+                <button class="nav-btn active" onclick="showSection('login')">Login</button>
+                <button class="nav-btn" onclick="showSection('register')">Register</button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Login Section -->
+            <section id="login-section" class="form-section">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-role">Role:</label>
+                        <select id="login-role" required>
+                            <option value="">Select Role</option>
+                            <option value="student">Student</option>
+                            <option value="teacher">Teacher</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-username">Username:</label>
+                        <input type="text" id="login-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+            </section>
+
+            <!-- Register Section -->
+            <section id="register-section" class="form-section" style="display: none;">
+                <h2>Register</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-role">Role:</label>
+                        <select id="register-role" required>
+                            <option value="">Select Role</option>
+                            <option value="student">Student</option>
+                            <option value="teacher">Teacher</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-name">Full Name:</label>
+                        <input type="text" id="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-username">Username:</label>
+                        <input type="text" id="register-username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password:</label>
+                        <input type="password" id="register-password" required>
+                    </div>
+                    <div class="form-group" id="teacher-fields" style="display: none;">
+                        <label for="register-subject">Subject:</label>
+                        <input type="text" id="register-subject">
+                    </div>
+                    <button type="submit" class="btn-primary">Register</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
